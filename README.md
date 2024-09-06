@@ -1,16 +1,11 @@
 # GPIB-to-SQL-DLL
 VISA Instrument Interface Library
 
-This library provides a robust interface for VISA-compliant instruments, streamlining the data retrieval process and ensuring its secure storage in an SQLite database. While it is primarily optimized for LabVIEW, its flexible design ensures compatibility with various platforms.
+This automates the data retrieval process for VISA-compliant machines and stores it in an SQLite database. While it is primarily optimized for LabVIEW, its flexible design ensures compatibility with various platforms. Since ExperiorLabs is restricted to LabVIEW, a DLL was needed to write code and automate the processes to save time. 
 
-Features
+This supports two primary modes of data retrieval: raw data retrieval and voltage-to-pressure conversion. An integrated SQLite functionality captures readings and vital metadata (timestamps, channel details, and configuration data.) The library also contains directory management functions. It checks if the necessary directories for data storage exist and creates them if not. Users also have the flexibility to set custom paths for the SQLite database, with the system providing feedback. 
 
-The library offers seamless communication, enabling smooth interaction with VISA-compliant instruments. It supports two primary modes of data retrieval: raw data retrieval and voltage-to-pressure conversion. An integrated SQLite functionality offers an efficient storage solution, capturing readings alongside vital metadata such as timestamps, channel details, and configuration data. Moreover, the library is equipped with directory management functions, ensuring the necessary directories for data storage exist and creating them if not. Users also have the flexibility to set custom paths for the SQLite database, with the system providing valuable feedback about the operation.
 
-Integration with LabVIEW
+For integration into LabVIEW: The integration process is straightforward. Start by importing the library into your LabVIEW project. Once imported, you can insert the commands and functions as required by your specific application.
 
-For those looking to harness the library's capabilities within LabVIEW, the integration process is straightforward. Begin by importing the library into your LabVIEW project. Once imported, you can insert the commands and functions as required by your specific application.
-
-Prerequisites
-
-It's worth noting that the SQLite and VISA libraries are essential for the optimal functioning of this system. The good news is that both have been compiled directly into the DLL, ensuring efficient and hassle-free operations without the need for external dependencies.
+It's worth noting that the SQLite and VISA libraries are essential for the optimal functioning of this system. But both are compiled into the DLL! Making it hassle-free for operations without the need for external dependencies.
